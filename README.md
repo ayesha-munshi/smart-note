@@ -28,6 +28,12 @@ Swagger UI is available on http://localhost:8080/swagger-ui/index.html
 
 ### Run the application inside container
 
+Packaging the application :
+
+```console
+mvn package
+```
+
 Building an image :
 
 ```console
