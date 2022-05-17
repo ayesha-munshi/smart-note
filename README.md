@@ -2,7 +2,7 @@
 
 ## Requirements
 
-The project requires Java 11 and makes use of Maven
+The project requires Java 11 and makes use of Maven and runs with H2 in-memory database
 
 ### Run the unit tests
 
@@ -12,11 +12,20 @@ The project requires Java 11 and makes use of Maven
 
 ### Run the application using maven
 
-Run the application which will be listening on port `8080`:
+Run the application :
 
 ```console
 $ mvn spring-boot:run
 ```
+
+### H2 database
+
+Console is available on http://localhost:8080/h2-console/login.jsp
+
+### Open Api documentation
+
+Swagger UI is available on http://localhost:8080/swagger-ui/index.html
+
 ### Run the application inside container
 
 Building an image :
@@ -228,6 +237,13 @@ Endpoint
 ```text
 POST api/v1/notebooks/<notebookId>/notes
 ```
+
+Parameters
+
+| Parameter    | Description                      |
+|--------------|----------------------------------|
+| `notebookId` | Id of the notebook               |
+
 
 Example of body
 
